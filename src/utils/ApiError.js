@@ -1,3 +1,5 @@
+// for api error handling usually from the user input or server issues
+
 class ApiError extends Error {
     constructor(
         statusCode,

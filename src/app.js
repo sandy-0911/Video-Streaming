@@ -1,12 +1,12 @@
 import express from 'express'
-import cors from 'cors'
+import cors from 'cors' // cross-origin resource sharing
 import cookieParser from 'cookie-parser'
 
 
 const app = express();
 
 app.use(cors({
-    origin : process.env.CORS_ORIGIN,
+    origin : process.env.CORS_ORIGIN, //takes the origin from environment variable
     credentials: true
 }))
 
