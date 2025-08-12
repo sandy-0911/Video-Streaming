@@ -3,7 +3,7 @@ const registerUser = asyncHandler(async (req, res) => {
   console.log("User registration successful")
   res.status(200).json({
     
-    message: "ok"
+    message: "api hit successfully",
   })
 } )
 export {
