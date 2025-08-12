@@ -2,7 +2,6 @@ import express from 'express'
 import cors from 'cors' // cross-origin resource sharing
 import cookieParser from 'cookie-parser'
 
-
 const app = express();
 
 app.use(cors({
@@ -16,13 +15,12 @@ app.use(express.static('public')) //serves static files from the public director
 app.use(cookieParser()) // parses cookies attached to the client request object
 
 
-//routes importes
-import router from './routes/user.routes.js';
+//routes imports
+import userRouter from './routes/user.routes.js';
 
 //routes declaration
-app.use("/api/v1/users", router);
+app.use("/api/v1/users", userRouter);
 
 //final url : https://localhost:8000/api/v1/users/register
 //final url : https://localhost:8000/api/v1/users/login
-
 export {app};
