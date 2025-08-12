@@ -17,11 +17,12 @@ app.use(cookieParser()) // parses cookies attached to the client request object
 
 
 //routes importes
-import userRouter from './routes/user.routes.js';
+import router from './routes/user.routes.js';
 
 //routes declaration
-app.use("/user", userRouter);
+app.use("/api/v1/users", router);
 
-//final url : https://localhost:5000/user/register
+//final url : https://localhost:5000/api/v1/user/register
+//final url : https://localhost:5000/api/v1/user/login
 
 export {app};
