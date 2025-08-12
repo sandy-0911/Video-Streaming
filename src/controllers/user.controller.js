@@ -6,6 +6,9 @@ const registerUser = asyncHandler(async (req, res) => {
     message: "api hit successfully",
   })
 } )
+
+
+
 export {
     registerUser,
 }
