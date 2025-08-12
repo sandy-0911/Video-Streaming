@@ -22,7 +22,7 @@ import router from './routes/user.routes.js';
 //routes declaration
 app.use("/api/v1/users", router);
 
-//final url : https://localhost:5000/api/v1/user/register
-//final url : https://localhost:5000/api/v1/user/login
+//final url : https://localhost:8000/api/v1/users/register
+//final url : https://localhost:8000/api/v1/users/login
 
 export {app};
