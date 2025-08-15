@@ -64,7 +64,7 @@ userSchema.pre("save", async function (next) {
     if (!this.isModified("password")) { // agar password modify nahi hua hai toh seedha next function call karo
         return next() 
     }
-    this.password = bcrypt.hash(this.password, 10); // 10 is the salt rounds
+    this.password = await bcrypt.hash(this.password, 10); // 10 is the salt rounds
     next();
 })
 
