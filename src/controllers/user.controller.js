@@ -19,6 +19,7 @@ const registerUser = asyncHandler(async (req, res) => {
   //data handling from frontend
   const {fullName, email, username, password}= req.body
   console.log("User details: ", email);
+  
 
   // if (fullName === ""){
   //   throw new ApiError(400, "Full name is required");
@@ -37,8 +38,8 @@ const registerUser = asyncHandler(async (req, res) => {
   if (existedUser) {
     throw new ApiError(409, "User already exists with this email or username");
   }
-   const avatarLocalpath = req.files?.avatar[0]?.path
-   const coverImageLocalPath = req.files?.coverImage[0]?.path
+   const avatarLocalpath = req.files?.avatar?.[0]?.path
+   const coverImageLocalPath = req.files?.coverImage?.[0]?.path
 
    if (!avatarLocalpath){
     throw new ApiError(400, "Avatar image is required");  
