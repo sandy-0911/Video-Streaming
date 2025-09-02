@@ -78,7 +78,7 @@ userSchema.methods.createAccessToken = function () {
     return jwt.sign(
         {_id : this._id,
         email : this.email,
-        fullname : this.fullname,
+        fullName : this.fullName,
         },
         process.env.ACCESS_TOKEN_SECRET,
         {
@@ -87,7 +87,7 @@ userSchema.methods.createAccessToken = function () {
 
      )
 }
-userSchema.methods.createAccessToken = function () {
+userSchema.methods.createRefreshToken = function () {
     return jwt.sign(
         {_id : this._id,
         
@@ -99,6 +99,6 @@ userSchema.methods.createAccessToken = function () {
 
      )
 }
-userSchema.methods.createRefreshToken = function () {}
+
 
 export const User = mongoose.model('User', userSchema)
