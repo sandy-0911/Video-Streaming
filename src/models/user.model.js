@@ -2,7 +2,7 @@ import mongoose, {Schema} from "mongoose";
 
 
 //In simple terms, it's used to safely store passwords so even if your database is hacked, the hacker can’t see the real passwords.bcrypt.
-//jasonwebtoken is used to create a token that can be used to authenticate the user in the future without having to log in again
+//jasonwebtoken is used to create a atoken that can be used to authenticate the user in the future without having to log in again
 import bcrypt from "bcryptjs"; // for hashing passwords
 import jwt from "jsonwebtoken"; // for creating tokens
 
